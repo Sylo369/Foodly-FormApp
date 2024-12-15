@@ -30,51 +30,52 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IntroPage));
             Heading = new Label();
-            button1 = new Button();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            IntroButton = new Button();
+            IntroPageImage = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)IntroPageImage).BeginInit();
             SuspendLayout();
             // 
             // Heading
             // 
             Heading.AutoSize = true;
-            Heading.Font = new Font("Century Gothic", 80F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            Heading.Location = new Point(471, 62);
+            Heading.Font = new Font("Broadway", 80.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            Heading.Location = new Point(384, 71);
             Heading.Name = "Heading";
-            Heading.Size = new Size(399, 128);
+            Heading.Size = new Size(434, 122);
             Heading.TabIndex = 0;
             Heading.Text = "Foodly";
             // 
-            // button1
+            // IntroButton
             // 
-            button1.FlatAppearance.BorderSize = 3;
-            button1.Location = new Point(579, 591);
-            button1.Name = "button1";
-            button1.Size = new Size(200, 79);
-            button1.TabIndex = 1;
-            button1.Text = "Press HERE to enter";
-            button1.UseVisualStyleBackColor = true;
+            IntroButton.FlatAppearance.BorderSize = 3;
+            IntroButton.Location = new Point(512, 572);
+            IntroButton.Name = "IntroButton";
+            IntroButton.Size = new Size(200, 79);
+            IntroButton.TabIndex = 1;
+            IntroButton.Text = "Press HERE to enter";
+            IntroButton.UseVisualStyleBackColor = true;
+            IntroButton.Click += this.IntroButton_Click;
             // 
-            // pictureBox1
+            // IntroPageImage
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(321, 220);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(718, 469);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-
+            IntroPageImage.Image = (Image)resources.GetObject("IntroPageImage.Image");
+            IntroPageImage.Location = new Point(249, 196);
+            IntroPageImage.Name = "IntroPageImage";
+            IntroPageImage.Size = new Size(718, 469);
+            IntroPageImage.TabIndex = 2;
+            IntroPageImage.TabStop = false;
             // 
             // IntroPage
             // 
             BackColor = Color.LightSalmon;
-            ClientSize = new Size(1365, 729);
-            Controls.Add(button1);
+            ClientSize = new Size(1184, 761);
+            Controls.Add(IntroButton);
             Controls.Add(Heading);
-            Controls.Add(pictureBox1);
+            Controls.Add(IntroPageImage);
             Name = "IntroPage";
-            Load += MainPage_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Text = "Foodly";
+            Load += IntroPage_Load;
+            ((System.ComponentModel.ISupportInitialize)IntroPageImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -83,7 +84,7 @@
 
 
         private Label Heading;
-        private Button button1;
-        private PictureBox pictureBox1;
+        private Button IntroButton;
+        private PictureBox IntroPageImage;
     }
 }

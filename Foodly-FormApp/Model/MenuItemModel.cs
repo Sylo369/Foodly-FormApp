@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Foodly_FormApp.Model
 {
-    public class MenuItem
+    public class MenuItemModel
     {
         public int Id { get; set; }
 

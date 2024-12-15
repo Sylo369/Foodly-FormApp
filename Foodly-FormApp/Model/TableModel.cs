@@ -14,7 +14,7 @@ namespace Foodly_FormApp.Model
 
         public int Sitters { get; set; }
 
-        public ICollection<MenuItem> OrderedItems { get; set; }
+        public ICollection<MenuItemModel> OrderedItems { get; set; }
 
     }
 }
