@@ -1,5 +1,4 @@
 ﻿using Foodly_FormApp.Model;
-using Foodly_FormApp.Utils;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -7,6 +6,11 @@ namespace Foodly_FormApp.Data
 {
     public class DataContext : DbContext
     {
+        public DataContext()
+        {
+                
+        }
+
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
@@ -16,14 +20,18 @@ namespace Foodly_FormApp.Data
         public DbSet<MenuItemModel> MenuItems { get; set; }
 
 
-        public DataContext CreateDbContext(string[] args)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
-
-            optionsBuilder.UseSqlServer(DbConfiguration.ConnectionString);
-            return new DataContext(optionsBuilder.Options);
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=DESKTOP-QMK9CKO\\SQLEXPRESS;Database=FoodlyDB;Trusted_Connection=True;TrustServerCertificate=true;");
+            }
         }
 
-     
+
+      
+           
+      
+
     }
 }
