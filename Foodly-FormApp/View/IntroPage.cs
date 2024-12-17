@@ -9,8 +9,6 @@ namespace Foodly_FormApp
             InitializeComponent();
         }
 
-  
-
         private void IntroPage_Load(object sender, EventArgs e)
         {
 

@@ -39,7 +39,7 @@
             // 
             Heading.AutoSize = true;
             Heading.Font = new Font("Broadway", 80.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            Heading.Location = new Point(384, 71);
+            Heading.Location = new Point(385, 71);
             Heading.Name = "Heading";
             Heading.Size = new Size(434, 122);
             Heading.TabIndex = 0;
@@ -54,12 +54,12 @@
             IntroButton.TabIndex = 1;
             IntroButton.Text = "Press HERE to enter";
             IntroButton.UseVisualStyleBackColor = true;
-            IntroButton.Click += this.IntroButton_Click;
+            IntroButton.Click += IntroButton_Click;
             // 
             // IntroPageImage
             // 
             IntroPageImage.Image = (Image)resources.GetObject("IntroPageImage.Image");
-            IntroPageImage.Location = new Point(249, 196);
+            IntroPageImage.Location = new Point(252, 196);
             IntroPageImage.Name = "IntroPageImage";
             IntroPageImage.Size = new Size(718, 469);
             IntroPageImage.TabIndex = 2;
@@ -74,6 +74,7 @@
             Controls.Add(IntroPageImage);
             Name = "IntroPage";
             Text = "Foodly";
+            WindowState = FormWindowState.Maximized;
             Load += IntroPage_Load;
             ((System.ComponentModel.ISupportInitialize)IntroPageImage).EndInit();
             ResumeLayout(false);
